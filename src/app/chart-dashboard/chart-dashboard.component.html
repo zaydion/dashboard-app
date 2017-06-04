@@ -1,0 +1,22 @@
+<div>
+  <ul>
+    <li *ngFor="let datasource of datasources">
+      {{datasource.name}}
+      <ul>
+        <li *ngFor="let dataset of datasource.datasets">
+          {{dataset.name}}
+          <ul>
+            <h4>Measures:</h4>
+            <li *ngFor="let measure of dataset.measures">
+              {{measure}}
+            </li>
+            <h4>Dimensions:</h4>
+            <li *ngFor="let dimension of dataset.dimensions">
+              {{dimension }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

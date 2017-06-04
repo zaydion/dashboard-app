@@ -1,0 +1,32 @@
+{
+  "datasources": [
+    {
+      "name": "Autotask",
+      "datasets": [
+        {
+          "id": "open_vs_closed",
+          "name": "Open vs. Closed Tickets",
+          "fields": {
+            "ticket_no": { "name": "Ticket #", "type": "string" },
+            "date": { "name": "Date", "type": "datetime" },
+            "date_opened": { "name": "Date Opened", "type": "datetime" },
+            "date_closed": { "name": "Date Closed", "type": "datetime" },
+            "summary": { "name": "Summary", "type": "string" },
+            "status": { "name": "Status", "type": "string" },
+            "state": { "name": "State", "type": "string" }
+          },
+          "measures": [
+            "status",
+            "state"
+          ],
+          "dimensions": [
+            "status",
+            "state",
+            "date_opened",
+            "date_closed"
+          ]
+        }
+      ]
+    }
+  ]
+}
