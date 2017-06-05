@@ -1,0 +1,12 @@
+#chart-dashboard {
+  border: 1px solid black;
+  padding: 2%;
+}
+
+.selected {
+  color: red;
+}
+
+.draggable {
+  border: 1px solid blue;
+}

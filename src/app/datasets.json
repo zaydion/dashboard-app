@@ -25,6 +25,80 @@
             "date_opened",
             "date_closed"
           ]
+        },
+        {
+          "id": "unpaid_vs_paid",
+          "name": "Unpaid vs. Paid Bills",
+          "fields": {
+            "bill_no": { "name": "Bill #", "type": "string" },
+            "date": { "name": "Date", "type": "datetime" },
+            "date_opened": { "name": "Date Opened", "type": "datetime" },
+            "date_closed": { "name": "Date Closed", "type": "datetime" },
+            "summary": { "name": "Summary", "type": "string" },
+            "status": { "name": "Status", "type": "string" },
+            "state": { "name": "State", "type": "string" }
+          },
+          "measures": [
+            "status",
+            "state"
+          ],
+          "dimensions": [
+            "status",
+            "state",
+            "date_opened",
+            "date_paid"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bill",
+      "datasets": [
+        {
+          "id": "unpaid_vs_paid",
+          "name": "Unpaid vs. Paid Bills",
+          "fields": {
+            "bill_no": { "name": "Bill #", "type": "string" },
+            "date": { "name": "Date", "type": "datetime" },
+            "date_opened": { "name": "Date Opened", "type": "datetime" },
+            "date_paid": { "name": "Date Closed", "type": "datetime" },
+            "summary": { "name": "Summary", "type": "string" },
+            "status": { "name": "Status", "type": "string" },
+            "state": { "name": "State", "type": "string" }
+          },
+          "measures": [
+            "status",
+            "state"
+          ],
+          "dimensions": [
+            "status",
+            "state",
+            "date_opened",
+            "date_paid"
+          ]
+        },
+        {
+          "id": "open_vs_closed",
+          "name": "Open vs. Closed Tickets",
+          "fields": {
+            "ticket_no": { "name": "Ticket #", "type": "string" },
+            "date": { "name": "Date", "type": "datetime" },
+            "date_opened": { "name": "Date Opened", "type": "datetime" },
+            "date_closed": { "name": "Date Closed", "type": "datetime" },
+            "summary": { "name": "Summary", "type": "string" },
+            "status": { "name": "Status", "type": "string" },
+            "state": { "name": "State", "type": "string" }
+          },
+          "measures": [
+            "status",
+            "state"
+          ],
+          "dimensions": [
+            "status",
+            "state",
+            "date_opened",
+            "date_closed"
+          ]
         }
       ]
     }

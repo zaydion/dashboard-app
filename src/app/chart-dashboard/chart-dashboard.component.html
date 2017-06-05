@@ -1,22 +1,40 @@
-<div>
-  <ul>
+<div id="chart-dashboard">
+  <ul *ngIf="datasources">
     <li *ngFor="let datasource of datasources">
-      {{datasource.name}}
+      <div (click)="selectDataSource(datasource)" [class.selected]="selectedDataSource === datasource">{{datasource.name}}</div>
       <ul>
         <li *ngFor="let dataset of datasource.datasets">
-          {{dataset.name}}
-          <ul>
+          <div *ngIf="selectedDataSource === datasource" (click)="selectDataSet(dataset)">{{dataset.name}}</div>
+          <ul *ngIf="selectedDataSet === dataset">
             <h4>Measures:</h4>
-            <li *ngFor="let measure of dataset.measures">
-              {{measure}}
-            </li>
+            <div [dragula]='"measure"' [dragulaModel]='dataset.measures'>
+              <li class="draggable" *ngFor="let measure of dataset.measures">
+                {{measure}}
+              </li>
+            </div>
             <h4>Dimensions:</h4>
-            <li *ngFor="let dimension of dataset.dimensions">
-              {{dimension }}
-            </li>
+            <div [dragula]='"dimension"' [dragulaModel]='dataset.dimensions'>
+              <li class="draggable" *ngFor="let dimension of dataset.dimensions">
+                {{dimension}}
+              </li>
+            </div>
           </ul>
         </li>
       </ul>
     </li>
   </ul>
+</div>
+
+
+<div>
+  <div>
+    <label>Measure:</label>
+    <input name="measure" [dragula]='"measure"' [(ngModel)]="measure"/>
+    <label>Dimension:</label>
+    <input name="dimension" [dragula]='"dimension"' [(ngModel)]="dimension"/>
+  </div>
+
+  <div>
+    viewing {{measure}} by {{dimension}}
+  </div>
 </div>
