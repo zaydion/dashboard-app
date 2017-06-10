@@ -1,11 +1,11 @@
-<div>
-    <label>Measure:</label>
-    <input name="measure" [dragula]='"measure"' [(ngModel)]="measure"/>
-    <label>Dimension:</label>
-    <input name="dimension" [dragula]='"dimension"' [(ngModel)]="dimension"/>
+<div id="query-builder" class="z-depth-2">
+  <label>Measure:</label>
+  <div id="measure" class="dropzone" name="measure" [dragula]='"measures"'></div>
+  by
+  <label>Dimension:</label>
+  <div id="dimension" class="dropzone" name="dimension" [dragula]='"dimensions"'></div>
 </div>
 
 
-<div>
-  viewing {{measure}} by {{dimension}}
-</div>
+
+

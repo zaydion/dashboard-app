@@ -7,10 +7,8 @@ import { DragulaService } from 'ng2-dragula/ng2-dragula';
   templateUrl: './chart-builder.component.html',
   styleUrls: ['./chart-builder.component.css']
 })
-export class ChartBuilderComponent implements OnInit {
+export class ChartBuilderComponent {
 
   constructor(private dragulaService: DragulaService) { }
 
-  ngOnInit() {
-  }
 }

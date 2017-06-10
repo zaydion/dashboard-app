@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { SimpleDropdownComponent } from './simple-dropdown.component';
+import { DataSourcesComponent } from './data-sources.component';
 
-describe('SimpleDropdownComponent', () => {
-  let component: SimpleDropdownComponent;
-  let fixture: ComponentFixture<SimpleDropdownComponent>;
+describe('DataSourcesComponent', () => {
+  let component: DataSourcesComponent;
+  let fixture: ComponentFixture<DataSourcesComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SimpleDropdownComponent ]
+      declarations: [ DataSourcesComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SimpleDropdownComponent);
+    fixture = TestBed.createComponent(DataSourcesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

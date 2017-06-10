@@ -1,4 +1,18 @@
-div {
-  border: 1px solid black;
+#query-builder {
+  background-color: white;
+  margin: 20px 50px 0 0;
   padding: 3%;
+  width: 50rem;
+  display: flex;
 }
+
+.dropzone {
+  list-style: none;
+  box-shadow: none;
+  background-color: #e0e0e0;
+  width: 100%;
+  font-size: 2em;
+}
+
+
+

@@ -1,40 +1,12 @@
 <div id="chart-dashboard">
-  <ul *ngIf="datasources">
-    <li *ngFor="let datasource of datasources">
-      <div (click)="selectDataSource(datasource)" [class.selected]="selectedDataSource === datasource">{{datasource.name}}</div>
-      <ul>
-        <li *ngFor="let dataset of datasource.datasets">
-          <div *ngIf="selectedDataSource === datasource" (click)="selectDataSet(dataset)">{{dataset.name}}</div>
-          <ul *ngIf="selectedDataSet === dataset">
-            <h4>Measures:</h4>
-            <div [dragula]='"measure"' [dragulaModel]='dataset.measures'>
-              <li class="draggable" *ngFor="let measure of dataset.measures">
-                {{measure}}
-              </li>
-            </div>
-            <h4>Dimensions:</h4>
-            <div [dragula]='"dimension"' [dragulaModel]='dataset.dimensions'>
-              <li class="draggable" *ngFor="let dimension of dataset.dimensions">
-                {{dimension}}
-              </li>
-            </div>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</div>
+  <sidebar-menu id="sidebar-menu"></sidebar-menu>
 
-
-<div>
-  <div>
-    <label>Measure:</label>
-    <input name="measure" [dragula]='"measure"' [(ngModel)]="measure"/>
-    <label>Dimension:</label>
-    <input name="dimension" [dragula]='"dimension"' [(ngModel)]="dimension"/>
-  </div>
 
   <div>
-    viewing {{measure}} by {{dimension}}
+    <chart-builder></chart-builder>
+
+    <div *ngIf="selectedDataSource && selectedDataSet">
+      grouping {{selectedDataSource.name}} by {{selectedDataSet.name}} viewing {{measure}} by {{dimension}}
+    </div>
   </div>
 </div>
