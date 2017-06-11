@@ -1,0 +1,6 @@
+<h5>{{title | titlecase}}:</h5>
+<div [dragula]=dragulaTitle>
+  <li  *ngFor="let field of fields" [@flyInOut]="SelectedDataSet" class="draggable z-depth-2">
+    {{field | replace:"_ "}}
+  </li>
+</div>

@@ -1,11 +1,10 @@
-.selected {
+.active {
   background-color: #2d86d4;
   color: white;
 }
 
 .datasource {
   background-color: rgb(250,250,250);
-  padding: 4%;
 }
 
 .datasource:hover {

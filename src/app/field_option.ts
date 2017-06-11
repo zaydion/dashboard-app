@@ -1,4 +1,4 @@
-export class FieldOptions {
+export class FieldOption {
   name: string;
   type: string;
 }

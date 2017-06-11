@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 
 
 @Component({
-  selector: 'app-chart-dashboard',
+  selector: 'chart-dashboard',
   templateUrl: './chart-dashboard.component.html',
   styleUrls: ['./chart-dashboard.component.css'],
   providers: []

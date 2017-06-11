@@ -1,0 +1,7 @@
+<li *ngFor="let dataset of datasets" [class.active]="dataset === selectedDataSet" (click)="selectDataSet(dataset); $event.stopPropagation()" class="collapsible-header">
+  <div><i class="material-icons">place</i>{{dataset.name}}</div>
+  <ul *ngIf="dataset === selectedDataSet">
+    <field-list [title]="'measures'" [fields]="dataset.measures"></field-list>
+    <field-list [title]="'dimensions'" [fields]="dataset.dimensions"></field-list>
+  </ul>
+</li>

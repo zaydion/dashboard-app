@@ -1,11 +1,11 @@
-import { FieldOptions } from './field_options';
+import { FieldOption } from './field_option';
 
 export class Field {
-  ticket_no: FieldOptions;
-  date: FieldOptions;
-  date_opened: FieldOptions;
-  date_closed: FieldOptions;
-  summary: FieldOptions;
-  status: FieldOptions;
-  state: FieldOptions;
+  ticket_no: FieldOption;
+  date: FieldOption;
+  date_opened: FieldOption;
+  date_closed: FieldOption;
+  summary: FieldOption;
+  status: FieldOption;
+  state: FieldOption;
 }

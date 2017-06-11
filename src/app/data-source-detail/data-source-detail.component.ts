@@ -6,20 +6,18 @@ import { DataSourceService } from 'app/datasource.service';
 
 
 @Component({
-  selector: 'data-source',
-  templateUrl: './data-source.component.html',
-  styleUrls: ['./data-source.component.css']
+  selector: 'data-source-detail',
+  templateUrl: './data-source-detail.component.html',
+  styleUrls: ['./data-source-detail.component.css']
 })
 
-export class DataSourceComponent {
-  dataset: DataSet;
+export class DataSourceDetailComponent {
   selectedDataSource: DataSource;
 
+  @Input()
+  datasource: DataSource;
 
   constructor(private dataSourceService: DataSourceService) {}
-
-  @Input()
-  datasources: DataSource[];
 
   selectDataSource(datasource: DataSource) {
     console.log(`${datasource.name} has been selected`);

@@ -1,8 +1,8 @@
-<li class="datasource collection-item" *ngFor="let datasource of datasources" (click)="selectDataSource(datasource)">
-  {{datasource.name}}
-  <!-- <div (click)="selectDataSource(datasource)" [class.selected]="selectedDataSource === datasource">{{datasource.name}}</div> -->
-  <ul id="datasets" class="collection" *ngIf="selectedDataSource === datasource">
-    <data-sets [datasource]="selectedDataSource"></data-sets>
-  </ul>
-</li>
+<!-- <ul *ngIf="datasource" id="datasets" class="collection"> -->
+  <li>{{datasource.name}}</li>
+<!--   <li *ngFor="let dataset of datasource.datasets" class="collection-item">
+    <data-set-list [datasets]="selectedDatasource.datasets"></data-set-list>
+  </li>
+</ul>
+ -->
 

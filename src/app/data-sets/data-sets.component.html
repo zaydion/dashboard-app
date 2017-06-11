@@ -1,6 +1,0 @@
-<li class="collection-item" [@flyInOut]="true" *ngFor="let dataset of datasource.datasets">
-  <div (click)="selectDataSet(dataset)">{{dataset.name}}</div>
-  <ul *ngIf="selectedDataSet === dataset">
-    <data-set [dataset]="dataset"></data-set>
-  </ul>
-</li>
