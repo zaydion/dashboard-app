@@ -2,9 +2,13 @@
   background-color: #2d86d4;
   font-family: "trebuchet ms", "roboto", "helvetica", "arial";
   display: flex;
-  justify-content: space-between;
   min-height: 500px;
   height: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
 
 
