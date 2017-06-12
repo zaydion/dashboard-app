@@ -1,18 +1,58 @@
+label {
+  font-size: 1.2rem;
+}
+
 #query-builder {
   background-color: white;
-  margin: 20px 50px 0 0;
-  padding: 3%;
+  margin-top: 50px;
+  margin-right: 40px;
+  padding: 6%;
+  padding-top: 2%;
   width: 50rem;
-  display: flex;
 }
 
 .dropzone {
+  background-color: rgb(250,250,250);
+  color: #2d86d4;
   list-style: none;
-  box-shadow: none;
-  background-color: #e0e0e0;
+  height: 50px;
   width: 100%;
-  font-size: 2em;
+  font-size: 2rem;
 }
+
+#group-by {
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  font-size: 1.75rem;
+}
+
+#buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+a {
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: none;
+  border-radius: 10px;
+  padding: 0 2%;
+  margin-left: 1%;
+}
+
+#query-mode {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#delete {
+  color: red;
+}
+
+.divider {
+  margin-bottom: 5%;
+}
+
 
 
 

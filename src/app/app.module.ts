@@ -15,9 +15,7 @@ import { ChartDashboardComponent } from './chart-dashboard/chart-dashboard.compo
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { DataSourceService } from './datasource.service';
 import { DataSourceListComponent } from './data-source-list/data-source-list.component';
-import { DataSourceDetailComponent } from './data-source-detail/data-source-detail.component';
 import { DataSetListComponent } from './data-set-list/data-set-list.component';
-import { DataSetDetailComponent } from './data-set-detail/data-set-detail.component';
 import { ChartBuilderComponent } from './chart-builder/chart-builder.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FieldListComponent } from './field-list/field-list.component';
@@ -32,9 +30,7 @@ const appRoutes: Routes = [
     ChartDashboardComponent,
     SidebarMenuComponent,
     DataSourceListComponent,
-    DataSourceDetailComponent,
     DataSetListComponent,
-    DataSetDetailComponent,
     ChartBuilderComponent,
     NavBarComponent,
     FieldListComponent,

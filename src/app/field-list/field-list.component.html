@@ -1,6 +1,8 @@
 <h5>{{title | titlecase}}:</h5>
-<div [dragula]=dragulaTitle>
-  <li  *ngFor="let field of fields" [@flyInOut]="SelectedDataSet" class="draggable z-depth-2">
+<div [dragula]=dragulaTitle class="field-list">
+  <li *ngFor="let field of fields" [@flyIn]="field" class="draggable z-depth-2">
     {{field | replace:"_ "}}
   </li>
 </div>
+
+<a (click)="turnOnRevert()">turn on revert</a>

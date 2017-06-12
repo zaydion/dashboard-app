@@ -1,3 +1,21 @@
+#data-source-list .collapsible-header {
+  font-weight: bolder;
+  font-size: 1.23rem;
+  padding: 3% 0 3% 6%;
+}
+
+#data-source-list .collapsible-header:hover {
+  background-color: #cfe4f5;
+  color: #2d86d4;
+}
+
+#data-source-list .collapsible-header.active {
+  background-color: #2d86d4;
+  color: white;
+  border-bottom: none;
+  border-left: none;
+
+}
 
 
 .collapsible {
@@ -7,4 +25,8 @@
 
 .collapsible-body {
   padding: 0;
+}
+
+.collapsible-body ul {
+  border: none;
 }

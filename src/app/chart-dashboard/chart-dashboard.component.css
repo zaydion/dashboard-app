@@ -1,13 +1,9 @@
 #chart-dashboard {
-  background-color: #1976D2;
+  background-color: #2d86d4;
   display: flex;
   justify-content: space-between;
   min-height: 500px;
   height: 100%;
-}
-
-.dropzone {
-  height: 40px;
 }
 
 

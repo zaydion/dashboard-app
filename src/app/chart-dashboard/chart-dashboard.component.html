@@ -1,12 +1,4 @@
 <div id="chart-dashboard">
   <sidebar-menu id="sidebar-menu"></sidebar-menu>
-
-
-  <div>
-    <chart-builder></chart-builder>
-
-    <div *ngIf="selectedDataSource && selectedDataSet">
-      grouping {{selectedDataSource.name}} by {{selectedDataSet.name}} viewing {{measure}} by {{dimension}}
-    </div>
-  </div>
+  <chart-builder></chart-builder>
 </div>

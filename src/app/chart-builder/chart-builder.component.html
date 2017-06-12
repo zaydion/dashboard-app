@@ -1,9 +1,23 @@
-<div id="query-builder" class="z-depth-2">
-  <label>Measure:</label>
-  <div id="measure" class="dropzone" name="measure" [dragula]="'measures-bag'"></div>
-  by
-  <label>Dimension:</label>
-  <div id="dimension" class="dropzone" name="dimension" [dragula]='"dimensions-bag"'></div>
+<div id="query-builder" class="row z-depth-2">
+  <div id="buttons" class="row">
+    <a id="query-mode">query mode</a>
+    <a id="raw-data">raw data</a>
+    <a id="delete">delete</a>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="col s5">
+    <label>Measure:</label>
+      <div id="measure" class="dropzone" name="measure" [dragula]="'measures-bag'"></div>
+  </div>
+
+  <div id="group-by" class="col s2">by</div>
+
+  <div class="col s5">
+    <label>Dimension:</label>
+    <div id="dimension" class="dropzone" name="dimension" [dragula]='"dimensions-bag"'></div>
+  </div>
 </div>
 
 
