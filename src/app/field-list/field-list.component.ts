@@ -25,25 +25,27 @@ export class FieldListComponent implements OnInit {
   constructor(
     private dragulaService: DragulaService
   ) {
-
-    // dragulaService.setOptions('measures-bag', {
-    //   accepts: this._accepts(element, target, source, sibling)
-    // });
-
       dragulaService.drop.subscribe(value => {
-        let [bagName, element, source, sibling] = value;
+        let [bagName, node, dropZone, sourceZone] = value;
 
-        dragulaService.setOptions(bagName, {
-          accepts: !element.classList.contains("dropped")
-        })
-        if(bagName === "measures-bag") {
-         this.selectedMeasure = element.innerHTML;
-        } else if(bagName === "dimensions-bag") {
-         this.selectedDimension = element.innerHTML;
+        if (dropZone.children.length > 1) {
+          // decide which item to move back to sourceZone
+          let nodeToMoveBack = dropZone.children[0];
+          if (nodeToMoveBack === node) {
+            nodeToMoveBack = dropZone.children[1];
+          }
+          // actually move item back to sourcezone
+          if (!dropZone.classList.contains("field-list")) {
+            sourceZone.appendChild(nodeToMoveBack);
+          }
         }
 
-        element.classList.add("dropped");
-        console.log(element.classList);
+        // set selected field
+        if (bagName === "measures-bag") {
+         this.selectedMeasure = node.innerHTML;
+        } else if (bagName === "dimensions-bag") {
+         this.selectedDimension = node.innerHTML;
+        }
       });
     }
 
@@ -51,21 +53,9 @@ export class FieldListComponent implements OnInit {
     this._makeDragulaTitle(this.title);
   }
 
-  turnOnRevert(): void {
-    let bag = this.dragulaService.find('measures-bag');
-    console.log(bag.drake.containers);
-    bag.drake.containers.splice(0,1);
-    console.log(bag.drake.containers);
-  }
-
   private
   _makeDragulaTitle(title: string): void {
     this.dragulaTitle = `${title}-bag`;
   }
 
-  _accepts(el: any, target: any, source: any, sibling: any): boolean {
-    if(!sibling) {
-      return true;
-    }
-  }
 }
