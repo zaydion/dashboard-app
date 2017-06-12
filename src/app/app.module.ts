@@ -21,7 +21,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FieldListComponent } from './field-list/field-list.component';
 
 const appRoutes: Routes = [
-  { path: 'dashboard', component: ChartDashboardComponent }
+  { path: '', component: ChartDashboardComponent }
 ];
 
 @NgModule({

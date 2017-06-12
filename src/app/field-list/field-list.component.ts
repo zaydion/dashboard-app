@@ -2,7 +2,6 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 import { DragulaService } from 'ng2-dragula/ng2-dragula';
 
-import { DataSet } from 'app/dataset';
 import { flyIn } from './animations';
 
 @Component({
